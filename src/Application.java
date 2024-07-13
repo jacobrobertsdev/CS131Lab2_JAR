@@ -65,6 +65,8 @@ public class Application {
 		
 		System.out.println("Current key: " + wizard.getKey());
 		System.out.println("Setting key... ");
+		wizard.setKey(0);
+		System.out.println("Setting key... ");
 		wizard.setKey(12345);
 		System.out.println("Key set to: " + wizard.getKey());
 		
@@ -84,6 +86,8 @@ public class Application {
 		wizard.lock(12345);
 		System.out.println("Locked status: " + wizard.isLocked());
 		System.out.println("Unlocking character... ");
+		wizard.unlock(1234);
+		System.out.println("Unlocking character... ");
 		wizard.unlock(12345);
 		System.out.println("Locked status: " + wizard.isLocked());
 		
@@ -91,14 +95,19 @@ public class Application {
 		System.out.println("=======================================");
 		System.out.println("End of tests for Lock, Unlock, isLocked");
 		System.out.println();
+		
+		
+		// toString
+		System.out.println("Tests for toString");
+		System.out.println("================================");
+		System.out.println();
 
-
-
-
-
-
-
-
+		System.out.println(wizard);
+		
+		System.out.println();
+		System.out.println("=========================");
+		System.out.println("End of tests for toString");
+		System.out.println();
 	}
 
 }

@@ -48,20 +48,20 @@ public class Wizard implements Lockable{
 	 */
 	
 	public void takeDamage(int power) {
-		if (!this.isLocked()) {
+		if (!this.isLocked()){
 			this.health -= power;
 		} else {
 			System.out.println(this.name + " is Locked.");
 		}
-		
 	}//end takeDamage
 	
 	/**
 	 * Getter for name
 	 * @return
 	 */
+	
 	public String getName() {
-	return this.name;
+		return this.name;
 	}//end getName
 	
 	/**
@@ -70,7 +70,7 @@ public class Wizard implements Lockable{
 	 */
 	
 	public void setName(String name) {
-	this.name = name;
+		this.name = name;
 	}//end setName
 	
 	/**
@@ -79,7 +79,7 @@ public class Wizard implements Lockable{
 	 */
 	
 	public int getHealth() {
-	return this.health;
+		return this.health;
 	}//end getHealth
 	
 	/**
@@ -105,7 +105,7 @@ public class Wizard implements Lockable{
 		if (this.key == 0 && key > 0){
 			this.key = key;
 		} else {
-			System.out.println("Invalid key (must be > 0), or key already exists. " + this.key);
+			System.out.println("Invalid key (must be > 0), or key already exists: " + this.key);
 			return;
 		}
 	}// end setKey
